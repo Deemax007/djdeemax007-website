@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>My First Website</title>
+<style>
+body{
+background: radial-gradient(circle at top, #222, black);
+color:white;
+text-align:center;
+font-family:Arial;
+}
+html{
+scroll-behavior: smooth;
+}
+
+h1{
+color: gold;
+font-size:60px;
+letter-spacing:3px;
+text-shadow:0 0 15px gold;
+margin-top:20px;
+}
+
+p{
+font-size:20px;
+}
+button{
+background-color: gold;
+color: black;
+font-size: 18px;
+padding: 12px 25px;
+border: none;
+border-radius: 25px;
+cursor: pointer;
+margin-top:20px;
+}
+button:hover{
+background-color: white;
+transform: scale(1.05);
+}
+nav{
+display:flex;
+justify-content:center;
+gap:30px;
+margin-bottom:30px;
+position:sticky;
+top:0;
+background:rgba(0,0,0,0.6);
+backdrop-filter: blur(8px);
+padding:12px;
+border-bottom:1px solid #333;
+}
+
+nav a{
+color: gold;
+text-decoration: none;
+margin: 15px;
+font-size:18px;
+}
+nav a:hover{
+color:white;
+border-bottom:2px solid gold;
+padding-bottom:3px;
+}
+h2{
+color: gold;
+margin-top:40px;
+}
+.container{
+max-width:800px;
+margin:auto;
+}
+.container{
+max-width:800px;
+margin:auto;
+background-color:#111;
+padding:40px;
+border-radius:20px;
+}
+
+img{
+box-shadow: 0 0 40px gold, 0 0 80px gold;
+transition: transform 0.3s;
+}
+
+img:hover{
+transform: rotate(5deg) scale(1.05);
+}
+footer{
+margin-top:40px;
+font-size:14px;
+color:gray;
+}
+ul{
+list-style:none;
+padding:0;
+}
+
+li{
+margin:10px;
+color:white;
+}
+.mixes{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+.mix-card{
+background:#222;
+padding:20px;
+border-radius:10px;
+width:200px;
+box-shadow:0 0 10px gold;
+}
+.mix-card:hover{
+transform: translateY(-8px);
+box-shadow:0 0 20px gold;
+}
+.contact{
+margin-top:40px;
+}
+.tagline{
+font-size:20px;
+color:#ccc;
+margin-top:-10px;
+margin-bottom:20px;
+font-style:italic;
+}
+.particles{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background-image: radial-gradient(gold 1px, transparent 1px);
+background-size:40px 40px;
+opacity:0.15;
+z-index:-1;
+}
+.play-btn{
+margin-top:10px;
+background:gold;
+color:black;
+border:none;
+padding:8px 15px;
+border-radius:20px;
+cursor:pointer;
+font-size:14px;
+}
+
+.play-btn:hover{
+background:white;
+}
+.hero{
+padding:60px 20px;
+background:linear-gradient(to bottom, rgba(255,215,0,0.15), transparent);
+border-radius:20px;
+margin-bottom:30px;
+}
+.hero img{
+width:300px;
+border-radius:50%;
+margin-top:20px;
+}
+.dj-ring{
+width:320px;
+height:320px;
+margin:30px auto;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+background:radial-gradient(circle, rgba(255,215,0,0.3), transparent 70%);
+box-shadow:0 0 40px gold, 0 0 80px gold;
+}
+
+.dj-ring img{
+width:260px;
+border-radius:50%;
+}
+.lights{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(120deg, transparent, rgba(255,215,0,0.2), transparent);
+animation: moveLights 6s linear infinite;
+}
+
+.hero{
+position:relative;
+overflow:hidden;
+}
+
+@keyframes moveLights{
+0%{
+transform:translateX(-100%);
+}
+100%{
+transform:translateX(100%);
+}
+}
+.dj-logo{
+transition: transform 0.5s;
+}
+
+.spin{
+animation: vinylSpin 4s linear infinite;
+}
+
+@keyframes vinylSpin{
+0%{
+transform: rotate(0deg);
+}
+100%{
+transform: rotate(360deg);
+}
+}
+</style>
+
+</head>
+
+<body>
+<div class="particles"></div>  
+<div class="container">    
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="mixes.html">Mixes</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<div class="hero">
+
+<div class="lights"></div>
+
+<h1 id="home">DJ_DeeMax_007</h1>
+
+<p class="tagline">Old School • Amapiano • Afrobeats • Party Vibez</p>
+
+<div class="dj-ring">
+<img src="dj.png" class="dj-logo">
+</div>
+</div>
+<p>Welcome to the official website of DJ_DeeMax_007.</p>
+<p>Experience energetic mixes, smooth transitions, and unforgettable party vibes.</p>
+<button>Book DJ_DeeMax_007</button>
+<div>
+
+<h2 id="about">About DJ_DeeMax_007</h2>
+
+<p>
+DJ_DeeMax_007 is a creative DJ known for energetic mixes, smooth transitions, and unforgettable party vibes.
+</p>
+<div>
+
+<h2 id="mixes">DJ Mixes</h2>
+<p>Listen to some of my latest mixes.</p>
+
+<div class="mixes">
+
+<div class="mix-card">
+Old School vs Amapiano Mix
+<br>
+<audio controls onplay="document.querySelector('.dj-logo').classList.add('spin')" onpause="document.querySelector('.dj-logo').classList.remove('spin')">
+<source src="mix1.mp3" type="audio/mpeg">
+</audio>
+</div>
+
+<div class="mix-card">
+Afrobeats Party Mix
+<br>
+<audio controls onplay="document.querySelector('.dj-logo').classList.add('spin')" onpause="document.querySelector('.dj-logo').classList.remove('spin')">
+<source src="mix2.mp3" type="audio/mpeg">
+</audio>
+</div>
+
+<div class="mix-card">
+Sunday Chill Vibes
+<br>
+<audio controls onplay="document.querySelector('.dj-logo').classList.add('spin')" onpause="document.querySelector('.dj-logo').classList.remove('spin')">
+<source src="mix3.mp3" type="audio/mpeg">
+</audio>
+</div>
+</div>
+<div>
+
+<h2 id="contact">Contact</h2>
+
+<p>For bookings and enquiries:</p>
+
+<p>📧 Email: <a href="mailto:macleraj2019@gmail.com">macleraj2019@gmail.com</a></p>
+
+<p>📞 Phone: +234 812 207 2198</p>
+<a href="https://wa.me/2348122072198" target="_blank">
+<button>Book via WhatsApp</button>
+</a>
+
+</div>
+<footer>
+
+<p>&copy; 2026 DJ_DeeMax_007 | All Rights Reserved</p>
+</footer>
+</div>
+</body>
+</html>
